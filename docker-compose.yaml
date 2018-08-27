@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+
+  web:
+    image: nginx
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - .:/var/www/react
+      - ./conf/nginx.conf.d:/etc/nginx/conf.d
+
+
+  fpm:
+    image: prcy/phalcon:3.4.x
+    volumes:
+      - .:/var/www/react
+
