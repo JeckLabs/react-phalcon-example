@@ -13,5 +13,5 @@ docker run -it --rm --volume $PWD:/workspace kkarczmarczyk/node-yarn yarn exec w
 Add `127.0.0.1       react.local` to your `/etc/hosts` and run
 
 ```bash
-docker-composer up
+docker-compose up
 ```
